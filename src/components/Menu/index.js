@@ -1,9 +1,9 @@
-import Link from 'next/Link';
 import React from 'react';
 import { Container, Ul, Li } from './styles';
 import Button from '../Button';
 import { MdPersonOutline } from 'react-icons/md';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Menu = () => {
   const router = useRouter();
