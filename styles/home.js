@@ -313,30 +313,30 @@ export const LogoDiv = styled.div`
   display: flex;
   align-items: center;
   align-self: flex-start;
+  font-size: 48px;
   margin-top: 250px;
   @media (max-width: 600px) {
+    font-size: 38px;
     align-self: center;
   }
 
   img {
     margin-right: 45px;
     @media (max-width: 600px) {
-      width: 90px;
-      margin-right: 25px;
+      width: 80px;
+      margin-right: 15px;
     }
   }
 `;
 
 export const TitleParticipar = styled.span`
   color: #212e51;
-  font-size: 48px;
   font-weight: bold;
 `;
 
 export const TitleParticiparOrange = styled.span`
   font-weight: bold;
   color: #dc825b;
-  font-size: 48px;
 `;
 
 export const ContentBeeginerFirst = styled.span`
@@ -438,4 +438,10 @@ export const ColumnTextAddress = styled.div`
   margin-bottom: 16px;
   max-width: 273px;
   color: #ffffff;
+`;
+
+export const ImgDesktop = styled.img`
+  margin: 70px 0;
+  width: 100%;
+  align-self: center;
 `;

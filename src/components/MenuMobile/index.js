@@ -12,13 +12,19 @@ const MenuMobile = () => {
   return (
     <Container open={openMenu}>
       <div>
-        <img src="/logoBeta.svg" alt="logo" />
+        <img
+          src={
+            router.pathname === '/home' ? '/logoBeta.svg' : '/logobranca.svg'
+          }
+          alt="logo"
+        />
         {!openMenu && <MdMenu onClick={() => setOpenMenu(true)} size={24} />}
         {openMenu && <MdClose onClick={() => setOpenMenu(false)} size={24} />}
       </div>
 
       {openMenu && (
         <nav>
+          <hr />
           <Ul>
             <Li currentPage={router.pathname === '/home'}>
               <Link href="/home">

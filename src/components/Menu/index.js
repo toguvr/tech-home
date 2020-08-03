@@ -11,7 +11,12 @@ const Menu = () => {
   return (
     <Container>
       <div>
-        <img src="/logoBeta.svg" alt="logo" />
+        <img
+          src={
+            router.pathname === '/home' ? '/logoBeta.svg' : '/logobranca.svg'
+          }
+          alt="logo"
+        />
         <nav>
           <Ul>
             <Li currentPage={router.pathname === '/home'}>
