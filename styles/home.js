@@ -10,6 +10,10 @@ export const Agendar = styled.section`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 600px) {
+    padding: 15px;
+  }
+
   > div {
     max-width: 1124px;
   }
@@ -28,6 +32,9 @@ export const Msg = styled.div`
 `;
 
 export const Button = styled.button`
+  @media (max-width: 600px) {
+    margin-bottom: 100px;
+  }
   padding: 13px 36px;
   border-radius: 40px;
   background-color: transparent;
@@ -61,6 +68,9 @@ export const VideoSection = styled.section`
   display: flex;
   flex-direction: column;
   background: #f7f7f7;
+  @media (max-width: 600px) {
+    padding: 5px;
+  }
 
   > div {
     margin-top: -170px;
@@ -138,6 +148,9 @@ export const CardWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: stretch;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const Investidores = styled.div`
@@ -164,6 +177,11 @@ export const SectionInvestidorTitle = styled.div`
   margin-top: 210px;
   align-self: flex-start;
   font-weight: bold;
+  @media (max-width: 600px) {
+    width: 100%;
+
+    padding: 15px;
+  }
 `;
 
 export const SectionEmpresaTitle = styled.div`
@@ -171,6 +189,11 @@ export const SectionEmpresaTitle = styled.div`
   color: #dc825b;
   align-self: flex-start;
   font-weight: bold;
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 15px;
+    margin-top: 27px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -178,6 +201,10 @@ export const ContentWrapper = styled.div`
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 15px;
+  }
 `;
 
 export const LeftContent = styled.div`
@@ -188,6 +215,11 @@ export const LeftContent = styled.div`
   max-width: 430px;
   letter-spacing: 0px;
   text-align: left;
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
 `;
 
 export const RightContent = styled.div`
@@ -195,6 +227,9 @@ export const RightContent = styled.div`
   color: #f7f7f7;
   width: 50%;
   letter-spacing: 0px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 
   p {
     display: flex;
@@ -257,12 +292,20 @@ export const Participar = styled.div`
   flex-direction: column;
   background-size: cover;
   padding-bottom: 115px;
+  @media (max-width: 600px) {
+    width: 100%;
+
+    padding: 15px;
+  }
 
   > div {
     display: flex;
     flex-direction: column;
     max-width: 1124px;
     width: 100%;
+    @media (max-width: 600px) {
+      align-items: center;
+    }
   }
 `;
 
@@ -271,9 +314,16 @@ export const LogoDiv = styled.div`
   align-items: center;
   align-self: flex-start;
   margin-top: 250px;
+  @media (max-width: 600px) {
+    align-self: center;
+  }
 
   img {
     margin-right: 45px;
+    @media (max-width: 600px) {
+      width: 90px;
+      margin-right: 25px;
+    }
   }
 `;
 
@@ -294,6 +344,9 @@ export const ContentBeeginerFirst = styled.span`
   color: #171b36;
   font-size: 24px;
   margin-top: 48px;
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 export const ContentBeeginerSecond = styled.span`
@@ -301,6 +354,9 @@ export const ContentBeeginerSecond = styled.span`
   margin: 48px 0 36px;
   color: #171b36;
   font-size: 24px;
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 export const ButtonParticipar = styled.button`
@@ -320,6 +376,9 @@ export const ButtonParticipar = styled.button`
   width: 260px;
   box-shadow: 0px 3px 6px #00000029;
   align-self: flex-start;
+  @media (max-width: 600px) {
+    align-self: center;
+  }
 `;
 
 export const Rodape = styled.div`
@@ -344,6 +403,10 @@ export const FirstElements = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 54px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Column = styled.div`
@@ -356,12 +419,18 @@ export const ColumnTitle = styled.div`
   font-size: 24px;
   color: #ffffff;
   margin-bottom: 24px;
+  @media (max-width: 600px) {
+    align-self: center;
+  }
 `;
 
 export const ColumnText = styled.div`
   font-size: 16px;
   margin-bottom: 16px;
   color: #ffffff;
+  @media (max-width: 600px) {
+    align-self: center;
+  }
 `;
 
 export const ColumnTextAddress = styled.div`

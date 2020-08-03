@@ -45,20 +45,16 @@ import {
   FaPhoneAlt,
 } from 'react-icons/fa';
 import { MdMail, MdLocalPhone } from 'react-icons/md';
+import MenuMobile from '../src/components/MenuMobile';
 
 function Home() {
-  const [windowSize, setWindowSize] = useState();
-
-  useEffect(() => {
-    setWindowSize(window.screen.width);
-  }, []);
-
   return (
     <Container>
       <Head>
         <title>Home</title>
       </Head>
-      {windowSize > 600 && <Menu />}
+      <Menu />
+      <MenuMobile />
       <Agendar id="agendar">
         <div>
           <Msg>
@@ -175,11 +171,11 @@ function Home() {
               <ButtonCadastrar>Cadastrar</ButtonCadastrar>
             </RightContent>
           </ContentWrapper>
-          <img
+          {/* <img
             style={{ margin: '70px 0', width: '1139px', alignSelf: 'center' }}
             src="/desktop.png"
             alt="desktop"
-          />
+          /> */}
           <SectionEmpresaTitle>Para Empresas</SectionEmpresaTitle>
 
           <ContentWrapper>
