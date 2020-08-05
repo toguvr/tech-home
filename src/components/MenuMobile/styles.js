@@ -4,7 +4,7 @@ export const Container = styled.div`
   @media (min-width: 600px) {
     display: none;
   }
-  background: #161933;
+  background: ${props => props.backColor};
   height: 80px;
   width: 100%;
   display: flex;
@@ -24,7 +24,8 @@ export const Container = styled.div`
   }
 
   > nav {
-    background: #161933;
+    background: ${props => props.backColor};
+
     position: fixed;
     top: 80px;
     width: 100%;

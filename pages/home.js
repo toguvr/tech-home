@@ -43,7 +43,7 @@ function Home() {
         <title>Home</title>
       </Head>
       <Menu />
-      <MenuMobile />
+
       <Agendar id="agendar">
         <div>
           <Msg>

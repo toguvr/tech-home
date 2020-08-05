@@ -10,7 +10,10 @@ const MenuMobile = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <Container open={openMenu}>
+    <Container
+      open={openMenu}
+      backColor={router.pathname === '/home' ? '#161933' : '#172039'}
+    >
       <div>
         <img
           src={
@@ -39,6 +42,11 @@ const MenuMobile = () => {
             <Li currentPage={router.pathname === '/ajuda'}>
               <Link href="/ajuda">
                 <a>Ajuda</a>
+              </Link>
+            </Li>
+            <Li currentPage={router.pathname === '/contato'}>
+              <Link href="/contato">
+                <a>Contato</a>
               </Link>
             </Li>
             <Li>

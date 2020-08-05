@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="657.119" height="664.89" viewBox="0 0 657.119 664.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.33" y1="-0.049" x2="0.406" y2="1.33" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#212e51"/>
+      <stop offset="1" stop-color="#131b30"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.039" y1="0.225" x2="-0.335" y2="0.625" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="0.238" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1c2745"/>
+      <stop offset="1" stop-color="#131b30"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_2421" data-name="Grupo 2421" transform="translate(-384.984 -867.246)">
+    <path id="Caminho_5100" data-name="Caminho 5100" class="cls-1" d="M253.65,319.328s-44.7-41.693-88.857-4.375c-27.256,23.039-65.625,26.137-91.807,2.431a66.357,66.357,0,0,1-22.056-49.21c0-.317.011-.622.023-.938-.113-17.41,7.122-34.277,19.987-47.978,38.674-41.207-5.313-87.308-5.313-87.308A66.544,66.544,0,0,1,163.55,42.018c24.453,24.328,29.642,59.554,4.725,89.139-18.97,22.531-31.744,56.706-5.641,84.889,39.737,38.55,78.886,9.474,91.6.633,31.643-22.011,65.331-19.818,89.626,5.008a66.553,66.553,0,0,1-90.213,97.641Z" transform="matrix(0.875, 0.485, -0.485, 0.875, 503.498, 823.162)"/>
+    <path id="Caminho_5088" data-name="Caminho 5088" class="cls-2" d="M153.426,349.8c24.486-24.1,28.173-67.559,4.348-93.544-25.032-30.817-24.448-67.317.076-98.185a69.319,69.319,0,1,0-107.148,0c24.524,30.868,25.121,67.368.076,98.185-23.825,25.986-20.138,69.44,4.348,93.544a69.891,69.891,0,0,0,98.3,0Z" transform="matrix(0.766, -0.643, 0.643, 0.766, 671.101, 1238.212)"/>
+    <circle id="Elipse_3002" data-name="Elipse 3002" class="cls-3" cx="82.109" cy="82.109" r="82.109" transform="translate(463.356 1367.918)"/>
+  </g>
+</svg>

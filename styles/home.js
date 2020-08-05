@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Agendar = styled.section`
   flex: 1;
-  background: url('/capa.svg') no-repeat center;
+  background: url('/capamenor.png') no-repeat center;
   background-size: cover;
   min-height: calc(100vh - 80px);
   align-items: center;
@@ -288,7 +288,7 @@ export const Participar = styled.div`
   width: 100%;
   align-items: center;
   position: relative;
-  background: url('/fundobranco.svg') no-repeat top;
+  background: url('/capabranca.png') no-repeat top;
   flex-direction: column;
   background-size: cover;
   padding-bottom: 115px;
