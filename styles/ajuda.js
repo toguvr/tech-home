@@ -138,11 +138,17 @@ export const PerfilContainer = styled.div`
 
     > div {
       display: flex;
-      align-items: center;
 
-      > span {
-        font-size: 16px;
-        font-weight: 600;
+      > a {
+        max-width: 250px;
+        align-items: center;
+        display: flex;
+        > span {
+          max-width: 230px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 600;
+        }
         margin: 20px 11px 20px 0;
       }
     }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Title,
@@ -35,14 +35,29 @@ import { Container } from '../styles/container';
 import Menu from '../src/components/Menu';
 import MenuMobile from '../src/components/MenuMobile';
 import Rodape from '../src/components/Rodape';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import { PopUp } from '../styles/solucoes';
 
 function Home() {
+  const [openCalendly, setOpenCalendly] = useState(false);
+
   return (
     <Container>
       <Head>
         <title>Home</title>
       </Head>
       <Menu />
+      {openCalendly && (
+        <PopUp>
+          <span onClick={() => setOpenCalendly(false)}>voltar</span>
+          <ClickAwayListener onClickAway={() => setOpenCalendly(false)}>
+            <iframe
+              src="https://calendly.com/marcelo-50/call-demo-beegin-tech?primary_color=d4743b&month=2020-08"
+              frameborder="3"
+            ></iframe>
+          </ClickAwayListener>
+        </PopUp>
+      )}
 
       <Agendar id="agendar">
         <div>
@@ -56,7 +71,9 @@ function Home() {
               casa organizada, investindo toda energia para focar no negócio.
               Então, facilitamos para você!
             </SubTitle>
-            <Button transparent>Agende sua demo</Button>
+            <Button onClick={() => setOpenCalendly(true)} transparent>
+              Agende sua demo
+            </Button>
           </Msg>
         </div>
       </Agendar>

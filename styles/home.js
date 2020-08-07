@@ -48,6 +48,7 @@ export const Button = styled.button`
   align-items: center;
   display: flex;
   justify-content: center;
+  z-index: 1;
 `;
 
 export const Title = styled.span`
@@ -292,9 +293,9 @@ export const Participar = styled.div`
   flex-direction: column;
   background-size: cover;
   padding-bottom: 115px;
+
   @media (max-width: 600px) {
     width: 100%;
-
     padding: 15px;
   }
 

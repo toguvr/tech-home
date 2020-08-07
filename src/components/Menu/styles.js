@@ -45,7 +45,7 @@ export const ContainerMobile = styled.div`
   justify-content: center;
   padding: 0 15px;
   position: ${props => (props.open ? 'fixed' : 'relative')};
-  z-index: 1;
+  z-index: 5;
 
   > div {
     width: 100%;

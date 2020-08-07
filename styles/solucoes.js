@@ -22,7 +22,6 @@ export const First = styled.div`
 
       @media (max-width: 600px) {
         flex-direction: column;
-        padding: 15px;
       }
 
       img {
@@ -30,6 +29,7 @@ export const First = styled.div`
         z-index: 1;
         @media (max-width: 600px) {
           width: 100%;
+          margin: 0;
         }
       }
 
@@ -63,6 +63,10 @@ export const First = styled.div`
       margin: 90px 0 35px;
       font-size: 48px;
       color: #212e51;
+
+      @media (max-width: 600px) {
+        font-size: 32px;
+      }
     }
   }
 `;
@@ -193,25 +197,36 @@ export const TitleDiv = styled.div`
 export const PopUp = styled.div`
   width: 100%;
   height: 100vh;
+  z-index: 1300;
+
   background: rgba(0, 0, 0, 0.8);
-  z-index: 999;
+
   position: fixed;
 
+  span {
+    color: #ee7e4d;
+    margin: 5px;
+    cursor: pointer;
+  }
+
   iframe {
+    z-index: 999;
+
     top: 25%;
     right: 25%;
     position: absolute;
     width: 960px;
     height: 570px;
     border: 3px solid #ee7e4d;
+    background: #fff;
 
     box-shadow: 2px 2px 6px #000;
 
     @media (max-width: 600px) {
-      top: 0;
+      top: 5vh;
       left: 0;
       width: 100%;
-      height: 100vh;
+      height: 95vh;
     }
   }
 `;
