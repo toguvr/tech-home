@@ -15,9 +15,11 @@ import {
   FaPhoneAlt,
 } from 'react-icons/fa';
 import { MdMail, MdLocalPhone } from 'react-icons/md';
+import { useRouter } from 'next/router';
 
 function Rodape() {
   const [showTel, setShowTel] = useState(false);
+  const router = useRouter();
 
   return (
     <Container>
@@ -27,21 +29,39 @@ function Rodape() {
 
           <Column>
             <ColumnTitle>Menu</ColumnTitle>
-            <ColumnText>Home</ColumnText>
-            <ColumnText>Soluções</ColumnText>
-            <ColumnText>Ajuda</ColumnText>
-            <ColumnText>Contato</ColumnText>
+            <ColumnText onClick={() => router.push('/home')}>Home</ColumnText>
+            <ColumnText onClick={() => router.push('/solucoes')}>
+              Soluções
+            </ColumnText>
+            <ColumnText onClick={() => router.push('/ajuda')}>Ajuda</ColumnText>
+            <ColumnText onClick={() => router.push('/contato')}>
+              Contato
+            </ColumnText>
           </Column>
           <Column>
             <ColumnTitle>beegin</ColumnTitle>
-            <ColumnText>Home</ColumnText>
-            <ColumnText>Soluções</ColumnText>
+            <ColumnText onClick={() => router.push('/home')}>Home</ColumnText>
+            <ColumnText onClick={() => router.push('/solucoes')}>
+              Soluções
+            </ColumnText>
           </Column>
           <Column>
             <ColumnTitle>Blog</ColumnTitle>
-            <ColumnText>Investimento em PMEs</ColumnText>
-            <ColumnText>Tempos de crise</ColumnText>
-            <ColumnText>Captação de recursos</ColumnText>
+            <ColumnText>
+              <a href="https://blog.beegin.com.br/noticias/investimento-em-pmes">
+                Investimento em PMEs
+              </a>
+            </ColumnText>
+            <ColumnText>
+              <a href="https://blog.beegin.com.br/noticias/tempos-de-crise">
+                Tempos de crise
+              </a>
+            </ColumnText>
+            <ColumnText>
+              <a href="https://blog.beegin.com.br/noticias/captacao-de-recursos">
+                Captação de recursos
+              </a>
+            </ColumnText>
           </Column>
         </FirstElements>
         <hr style={{ width: '100%', borderColor: '#cececece' }} />
@@ -54,9 +74,15 @@ function Rodape() {
           </Column>
           <Column>
             <ColumnTitle>
-              <FaInstagram style={{ margin: ' 0 9px' }} size={24} />
-              <FaFacebook style={{ margin: ' 0 9px' }} size={24} />
-              <FaLinkedin style={{ margin: ' 0 9px' }} size={24} />
+              <a href="https://www.instagram.com/beegin.tech/">
+                <FaInstagram style={{ margin: ' 0 9px' }} size={24} />
+              </a>
+              <a href="https://www.facebook.com/plataformabeegin">
+                <FaFacebook style={{ margin: ' 0 9px' }} size={24} />
+              </a>
+              <a href="https://www.linkedin.com/company/plataformabeegin/">
+                <FaLinkedin style={{ margin: ' 0 9px' }} size={24} />
+              </a>
             </ColumnTitle>
           </Column>
           <Column>
@@ -66,38 +92,25 @@ function Rodape() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                position: 'relative',
               }}
             >
               <div
+                onClick={() => router.push('/contato')}
                 style={{
-                  background: 'transparent',
-                  border: '1px solid #fff',
-                  borderRadius: '50%',
-                  width: '40px',
-                  height: '40px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
                   marginRight: '16px',
                 }}
               >
                 <MdMail size={24} />
               </div>
-              <div
-                style={{
-                  background: 'transparent',
-                  border: '1px solid #fff',
-                  borderRadius: '50%',
-                  width: '40px',
-                  height: '40px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
+              <div>
                 <MdLocalPhone onClick={() => setShowTel(!showTel)} size={24} />
               </div>
-              {showTel && <span>+55 98169141</span>}
+              {showTel && (
+                <span style={{ position: 'absolute', right: -120 }}>
+                  +55 98169141
+                </span>
+              )}
             </ColumnText>
           </Column>
           <Column>
@@ -105,7 +118,9 @@ function Rodape() {
             <ColumnTitle>Grupo Solum</ColumnTitle>
           </Column>
         </FirstElements>
-        <ColumnText>© 2020 beegin. Todos direitos reservados.</ColumnText>
+        <ColumnText style={{ cursor: 'default' }}>
+          © 2020 beegin. Todos direitos reservados.
+        </ColumnText>
       </div>
     </Container>
   );

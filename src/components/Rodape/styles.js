@@ -41,12 +41,37 @@ export const ColumnTitle = styled.div`
   @media (max-width: 600px) {
     align-self: center;
   }
+
+  > svg {
+    cursor: pointer;
+  }
 `;
 
 export const ColumnText = styled.div`
   font-size: 16px;
   margin-bottom: 16px;
+  cursor: pointer;
   color: #ffffff;
+
+  > div {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+
+    :hover {
+      background: #ffffff;
+      color: #202c4e;
+    }
+    > svg {
+    }
+  }
   @media (max-width: 600px) {
     align-self: center;
   }

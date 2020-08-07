@@ -157,7 +157,9 @@ function Home() {
               <Cadastre>Cadastre-se e aproveite os benefícios</Cadastre>
             </LeftContent>
             <RightContent>
-              <ButtonCadastrar>Cadastrar</ButtonCadastrar>
+              <ButtonCadastrar>
+                <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+              </ButtonCadastrar>
             </RightContent>
           </ContentWrapper>
           <ImgDesktop src="/desktop.png" alt="desktop" />
@@ -193,7 +195,10 @@ function Home() {
               <Cadastre>Conheça nossas vantagens!</Cadastre>
             </LeftContent>
             <RightContent>
-              <ButtonCadastrar>Cadastrar</ButtonCadastrar>
+              <ButtonCadastrar>
+                {' '}
+                <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+              </ButtonCadastrar>
             </RightContent>
           </ContentWrapper>
         </div>
@@ -215,7 +220,9 @@ function Home() {
           <ContentBeeginerSecond>
             Seja uma das primeiras 30 empresas selecionadas!
           </ContentBeeginerSecond>
-          <ButtonParticipar>Quero participar</ButtonParticipar>
+          <ButtonParticipar>
+            <a href="https://web.tech.beegin.com.br/">Quero participar</a>
+          </ButtonParticipar>
         </div>
       </Participar>
       <Rodape />

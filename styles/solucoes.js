@@ -27,6 +27,7 @@ export const First = styled.div`
 
       img {
         margin-right: 47px;
+        z-index: 1;
         @media (max-width: 600px) {
           width: 100%;
         }
@@ -77,7 +78,7 @@ export const Second = styled.div`
   background-color: #131b30;
   display: flex;
   justify-content: center;
-  z-index: -1;
+
   margin-top: -45px;
   width: 100%;
 `;
@@ -90,7 +91,6 @@ export const ContentWrapperUp = styled.div`
   max-width: 1240px;
   width: 100%;
   display: flex;
-
   justify-content: space-between;
 
   @media (max-width: 600px) {
@@ -188,6 +188,32 @@ export const TitleDiv = styled.div`
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: bold;
+`;
+
+export const PopUp = styled.div`
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  position: fixed;
+
+  iframe {
+    top: 25%;
+    right: 25%;
+    position: absolute;
+    width: 960px;
+    height: 570px;
+    border: 3px solid #ee7e4d;
+
+    box-shadow: 2px 2px 6px #000;
+
+    @media (max-width: 600px) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+    }
+  }
 `;
 
 export const Fourth = styled.div`

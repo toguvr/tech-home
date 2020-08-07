@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   First,
@@ -9,12 +9,15 @@ import {
   RightContent,
   Third,
   Fourth,
+  PopUp,
 } from '../styles/solucoes';
 import { Container } from '../styles/container';
 import Menu from '../src/components/Menu';
 import Rodape from '../src/components/Rodape';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 function Solucoes() {
+  const [openCalendly, setOpenCalendly] = useState(false);
   return (
     <Container>
       <Menu />
@@ -55,7 +58,10 @@ function Solucoes() {
             <span style={{ fontSize: '36px', color: '#f7f7f7' }}>
               Cadastre-se e aproveite os benefícios
             </span>
-            <button>Cadastrar</button>
+            <button>
+              {' '}
+              <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+            </button>
           </LeftContent>
           <RightContent>
             <div>
@@ -96,7 +102,10 @@ function Solucoes() {
             <span style={{ fontSize: '36px', color: '#f7f7f7' }}>
               Faça seu cadastro e conheça nossas vantagens
             </span>
-            <button>Cadastrar</button>
+            <button>
+              {' '}
+              <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+            </button>
           </LeftContent>
           <RightContent>
             <div>
@@ -136,10 +145,20 @@ function Solucoes() {
             suas funcionalidades, nosso time está a disposição para conversar
             com você.
           </span>
-          <button>Agende sua demo</button>
+          <button onClick={() => setOpenCalendly(true)}>Agende sua demo</button>
         </div>
       </Fourth>
       <Rodape />
+      {openCalendly && (
+        <PopUp>
+          <ClickAwayListener onClickAway={() => setOpenCalendly(false)}>
+            <iframe
+              src="https://calendly.com/marcelo-50/call-demo-beegin-tech?primary_color=d4743b&month=2020-08"
+              frameborder="3"
+            ></iframe>
+          </ClickAwayListener>
+        </PopUp>
+      )}
     </Container>
   );
 }

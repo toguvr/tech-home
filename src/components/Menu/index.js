@@ -45,11 +45,14 @@ const Menu = () => {
               </Li>
               <Li style={{ marginLeft: '39px' }}>
                 <Button>
-                  Faça parte <MdPersonOutline size={16} />
+                  <a href="https://web.tech.beegin.com.br/">Faça parte</a>
+                  <MdPersonOutline size={16} />
                 </Button>
               </Li>
               <Li>
-                <Button transparent>Login</Button>
+                <Button transparent>
+                  <a href="https://web.tech.beegin.com.br/">Login</a>
+                </Button>
               </Li>
             </Ul>
           </nav>
@@ -96,11 +99,15 @@ const Menu = () => {
               </Li>
               <Li>
                 <Button>
-                  Faça parte <MdPersonOutline size={16} />
+                  <a href="https://web.tech.beegin.com.br/">Faça parte</a>{' '}
+                  <MdPersonOutline size={16} />
                 </Button>
               </Li>
               <Li>
-                <Button transparent>Login</Button>
+                <Button transparent>
+                  {' '}
+                  <a href="https://web.tech.beegin.com.br/">Login</a>
+                </Button>
               </Li>
             </Ul>
           </nav>

@@ -22,6 +22,8 @@ function Home() {
     trabalhe: false,
   });
 
+  const [formData, setFormData] = useState({});
+
   const perfis = ['Investidores', 'Empreendedor', 'Trabalhe conosco'];
   return (
     <Container>
@@ -54,24 +56,76 @@ function Home() {
                       <div>
                         <div>
                           <label htmlFor="assunto">Assunto</label>
-                          <input type="text" />
+                          <input
+                            onChange={e =>
+                              setFormData({
+                                ...formData,
+                                [e.target.name]: e.target.value,
+                              })
+                            }
+                            name={`assunto${perfil}`}
+                            value={formData[`assunto${perfil}`]}
+                            type="text"
+                          />
                         </div>
                         <div>
-                          <label htmlFor="assunto">E-mail</label>
-                          <input type="text" />
+                          <label htmlFor="email">E-mail</label>
+                          <input
+                            onChange={e =>
+                              setFormData({
+                                ...formData,
+                                [e.target.name]: e.target.value,
+                              })
+                            }
+                            name={`email${perfil}`}
+                            value={formData[`email${perfil}`]}
+                            type="text"
+                          />
                         </div>
                       </div>
                       <div>
                         <div>
-                          <label htmlFor="assunto">Nome completo</label>
-                          <input type="text" />
+                          <label htmlFor="nome">Nome completo</label>
+                          <input
+                            onChange={e =>
+                              setFormData({
+                                ...formData,
+                                [e.target.name]: e.target.value,
+                              })
+                            }
+                            name={`nome${perfil}`}
+                            value={formData[`nome${perfil}`]}
+                            type="text"
+                          />
                         </div>
                         <div>
-                          <label htmlFor="assunto">Telefone</label>
-                          <input type="text" />
+                          <label htmlFor="telefone">Telefone</label>
+                          <input
+                            onChange={e =>
+                              setFormData({
+                                ...formData,
+                                [e.target.name]: e.target.value,
+                              })
+                            }
+                            name={`telefone${perfil}`}
+                            value={formData[`telefone${perfil}`]}
+                            type="text"
+                          />
                         </div>
                       </div>
-                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                      <textarea
+                        onChange={e =>
+                          setFormData({
+                            ...formData,
+                            [e.target.name]: e.target.value,
+                          })
+                        }
+                        name={`descricao${perfil}`}
+                        value={formData[`descricao${perfil}`]}
+                        cols="30"
+                        rows="10"
+                        placeholder="Descrição"
+                      ></textarea>
                       <button>Enviar</button>
                     </div>
                   </Form>
