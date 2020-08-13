@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Contato, Accordeon, Form } from '../styles/contato';
 import Head from 'next/head';
 import { Container } from '../styles/container';
@@ -14,6 +14,7 @@ import MenuMobile from '../src/components/MenuMobile';
 import Rodape from '../src/components/Rodape';
 import Button from '../src/components/Button';
 import { Investidores } from '../styles/home';
+import axios from 'axios';
 
 function Home() {
   const [openForm, setOpenForm] = useState({
@@ -24,11 +25,34 @@ function Home() {
 
   const [formData, setFormData] = useState({});
 
+  const sendEmail = useCallback(
+    async perfil => {
+      const body = {
+        tipo: perfil,
+        assunto: formData[`assunto${perfil}`],
+        email: formData[`email${perfil}`],
+        nome: formData[`nome${perfil}`],
+        telefone: formData[`telefone${perfil}`],
+        descricao: formData[`descricao${perfil}`],
+      };
+
+      try {
+        axios.post(
+          `${process.env.REACT_APP_API}/api/EmailContato?code=gjzUsqvVHwBgaiJjvAALg7AL8TwYw9L3srYQbzxaS4DWPNszkr`,
+          body,
+        );
+      } catch (err) {}
+    },
+    [formData],
+  );
+
   const perfis = ['Investidores', 'Empreendedor', 'Trabalhe conosco'];
   return (
     <Container>
       <Head>
-        <title>Soluções</title>
+        <title>Contato</title>
+
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Menu />
 
@@ -126,7 +150,7 @@ function Home() {
                         rows="10"
                         placeholder="Descrição"
                       ></textarea>
-                      <button>Enviar</button>
+                      <button onClick={() => sendEmail(perfil)}>Enviar</button>
                     </div>
                   </Form>
                 )}

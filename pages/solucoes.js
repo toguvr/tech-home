@@ -15,11 +15,20 @@ import { Container } from '../styles/container';
 import Menu from '../src/components/Menu';
 import Rodape from '../src/components/Rodape';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Head from 'next/head';
 
 function Solucoes() {
   const [openCalendly, setOpenCalendly] = useState(false);
   return (
     <Container>
+      <Head>
+        <meta name="robots" content="index, follow" />
+        <title>Soluções e Funcionalidades beegin.tech - Plataforma de RI</title>
+        <description>
+          Controle o desempenho do seu negócio com Dashboards de Gestão de
+          Conselho, Cap table e relatórios de resultados para investidores.
+        </description>
+      </Head>
       <Menu />
       <First>
         <div>

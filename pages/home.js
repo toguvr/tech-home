@@ -44,7 +44,12 @@ function Home() {
   return (
     <Container>
       <Head>
-        <title>Home</title>
+        <title>Plataforma de RI - beegin.tech</title>
+        <meta name="robots" content="index, follow"></meta>
+        <description>
+          A beegin.tech te ajuda a organizar sua empresa para atrair
+          investidores com uma plataforma para gerir a relação com investidores.
+        </description>
       </Head>
       <Menu />
       {openCalendly && (

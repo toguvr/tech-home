@@ -12,10 +12,16 @@ import { MdSearch, MdKeyboardArrowRight } from 'react-icons/md';
 import Menu from '../src/components/Menu';
 import MenuMobile from '../src/components/MenuMobile';
 import Rodape from '../src/components/Rodape';
+import Head from 'next/head';
 
 function Ajuda() {
   return (
     <Container>
+      <Head>
+        <title>Ajuda</title>
+
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <Menu />
 
       <ComoAjuda>

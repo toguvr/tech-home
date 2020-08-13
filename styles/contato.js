@@ -74,7 +74,7 @@ export const Accordeon = styled.div`
   }
 `;
 
-export const Form = styled.form`
+export const Form = styled.main`
   padding: 30px;
   > div {
     width: 70%;
