@@ -24,10 +24,10 @@ function Solucoes() {
       <Head>
         <meta name="robots" content="index, follow" />
         <title>Soluções e Funcionalidades beegin.tech - Plataforma de RI</title>
-        <description>
+        {/* <description>
           Controle o desempenho do seu negócio com Dashboards de Gestão de
           Conselho, Cap table e relatórios de resultados para investidores.
-        </description>
+        </description> */}
       </Head>
       <Menu />
       <First>

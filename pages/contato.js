@@ -15,6 +15,7 @@ import Rodape from '../src/components/Rodape';
 import Button from '../src/components/Button';
 import { Investidores } from '../styles/home';
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
 
 function Home() {
   const [openForm, setOpenForm] = useState({
@@ -23,10 +24,12 @@ function Home() {
     trabalhe: false,
   });
 
+  const [status, setStatus] = useState('Enviar');
   const [formData, setFormData] = useState({});
 
   const sendEmail = useCallback(
     async perfil => {
+      setStatus('Enviando...');
       const body = {
         tipo: perfil,
         assunto: formData[`assunto${perfil}`],
@@ -37,11 +40,14 @@ function Home() {
       };
 
       try {
-        axios.post(
+        await axios.post(
           `${process.env.REACT_APP_API}/api/EmailContato?code=gjzUsqvVHwBgaiJjvAALg7AL8TwYw9L3srYQbzxaS4DWPNszkr`,
           body,
         );
-      } catch (err) {}
+        setStatus('Enviado');
+      } catch (err) {
+        setStatus('Falha no envio!');
+      }
     },
     [formData],
   );
@@ -55,7 +61,6 @@ function Home() {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Menu />
-
       <Contato id="Contato">
         <div>
           <span>Contato</span>
@@ -150,7 +155,9 @@ function Home() {
                         rows="10"
                         placeholder="Descrição"
                       ></textarea>
-                      <button onClick={() => sendEmail(perfil)}>Enviar</button>
+                      <button onClick={() => sendEmail(perfil)}>
+                        {status}
+                      </button>
                     </div>
                   </Form>
                 )}
