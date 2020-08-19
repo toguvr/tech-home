@@ -68,13 +68,15 @@ function Home() {
         <div>
           <Msg>
             <Title>
-              A beegin.tech te ajuda a organizar sua empresa para atrair
+              A beegin.tech te ajuda a preparar a sua empresa para atrair
               investidores
             </Title>
             <SubTitle>
-              Somos empreendedores também. Entendemos os desafios de manter a
-              casa organizada, investindo toda energia para focar no negócio.
-              Então, facilitamos para você!
+              Aprimoramos a relação entre empresas e investidores. <br />
+              Entendemos sobre os desafios de manter a casa organizada porque
+              somos empreendedores também. Visando facilitar a rotina de
+              reports, simplificando o monitoramento e aproximando acionistas,
+              oferecemos uma plataforma completa.
             </SubTitle>
             <Button onClick={() => setOpenCalendly(true)} transparent>
               Agende sua demo
@@ -99,22 +101,22 @@ function Home() {
           <Card>
             <CardTitle>Padronize</CardTitle>
             <CardSubTitle>
-              seus reports de resultados usando modelos pensados por
-              investidores de mercado
+              seus reports de resultados usando modelos utilizados por
+              investidores de mercado.
             </CardSubTitle>
           </Card>
           <Card>
             <CardTitle>Simplifique</CardTitle>
             <CardSubTitle>
               a construção de relatórios, extraindo de forma automatizada dados
-              financeiros e contábeis
+              financeiros e contábeis.
             </CardSubTitle>
           </Card>
           <Card>
             <CardTitle>Controle</CardTitle>
             <CardSubTitle>
-              o desempenho do seu negócio, configurando um painel sob medida de
-              indicadores operacionais
+              o desempenho da sua empresa selecionando os indicadores mais
+              adequados ao seu negócio.
             </CardSubTitle>
           </Card>
         </CardWrapper>
@@ -122,22 +124,22 @@ function Home() {
           <Card>
             <CardTitle>Facilite</CardTitle>
             <CardSubTitle>
-              a organização da sua estrutura societária usando nossa ferramenta
-              de gestão do cap table
+              a gestão da estrutura societária da sua empresa consolidando
+              informações e documentos na nossa plataforma.
             </CardSubTitle>
           </Card>
           <Card>
-            <CardTitle>Aproxime</CardTitle>
+            <CardTitle>Gerencie</CardTitle>
             <CardSubTitle>
-              seus acionistas estratégicos através do ambiente para interação e
-              gestão de atividades de conselhos
+              o calendário de reuniões e as atividades dos seus conselhos de
+              administração.
             </CardSubTitle>
           </Card>
           <Card>
             <CardTitle>Ganhe</CardTitle>
             <CardSubTitle>
-              mais visibilidade para sua empresa no mercado, aparecendo na nossa
-              vitrine para investidores profissionais
+              visibilidade entre potenciais investidores divulgando informações
+              do seu negócio na nossa vitrine.
             </CardSubTitle>
           </Card>
         </CardWrapper>
@@ -155,22 +157,22 @@ function Home() {
               <TitleDiv>Chegou a hora de dar adeus a...</TitleDiv>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Tenha uma visão padronizada dos reports de seu portfólio de
-                empresas por um baixo custo em poucos cliques e nunca mais perca
-                o controle do status de sua carteira de negócios.
+                Consolide suas participações em empresas em um só lugar
               </p>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Baixa transparência sobre o status do cap table das investidas
+                Acompanhe o desempenho desses negócios acessando relatórios
+                padronizados
               </p>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Dificuldade de estimar o valuation aproximado das empresas
-                investidas
+                Reduza esforço e custo de observância para monitorar suas
+                posições
               </p>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Necessidade de consolidar participações
+                Tenha mais transparência sobre o status do quadro societário das
+                suas investidas
               </p>
             </RightContent>
           </ContentWrapper>
@@ -196,19 +198,23 @@ function Home() {
               <TitleDiv>Uma solução para quem enfrenta...</TitleDiv>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Falta braço para estruturar reports dedicados para investidores
+                Eleve os níveis de governança e prepare o seu negócio para o
+                crescimento
               </p>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Carência de guidance/benchmarks de formatos adequados de reports
+                Simplifique a forma de construir seus reports financeiros e
+                contábeis
               </p>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Dificuldade de mensurar o valuation de seus negócios
+                Aprimore sua divulgação de resultados e invista na relação com
+                seus acionistas
               </p>
               <p>
                 <img src="/hexagono.svg" alt="hexagono" />
-                Baixo acesso para souding sobre eventuais rodadas de captação
+                Gerencie suas reuniões de conselho e consolide as informações
+                societárias da sua empresa
               </p>
             </RightContent>
           </ContentWrapper>
@@ -235,13 +241,12 @@ function Home() {
             </div>
           </LogoDiv>
           <ContentBeeginerFirst>
-            Como membro do programa beeginer, você terá acesso exclusivo a fase
-            beta, testando todas as funcionalidades e nos ajudando a deixar
-            nosso software ainda melhor!
+            Estamos chegando no mercado e nossos primeiros usuários serão
+            fundamentais para que a beegin.tech seja cada vez melhor. Se
+            candidate para testar nossas funcionalidades e tenha acesso a um
+            pacote exclusivo de vantagens.
           </ContentBeeginerFirst>
-          <ContentBeeginerSecond>
-            Seja uma das primeiras 30 empresas selecionadas!
-          </ContentBeeginerSecond>
+          <ContentBeeginerSecond>Inscrições limitadas!</ContentBeeginerSecond>
           <ButtonParticipar>
             <a href="https://web.tech.beegin.com.br/">Quero participar</a>
           </ButtonParticipar>

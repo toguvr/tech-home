@@ -26,7 +26,7 @@ function Ajuda() {
 
       <ComoAjuda>
         <div>
-          <span>Como podemos te ajudar?</span>
+          <span>Como podemos ajudar você?</span>
           <Search>
             <MdSearch color="#4F4F4F" size={16} />
             <input type="text" placeholder="Busque pelo que precisa" />

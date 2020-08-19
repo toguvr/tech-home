@@ -36,25 +36,25 @@ function Solucoes() {
           <div>
             <img src="/imac.png" alt="" />
             <div>
-              <p>Relatório de resultado</p>
+              <p>Reports de resultado</p>
               <span>
-                Padronize seus reports de resultados usando modelos pensados por
-                investidores de mercado.
+                Utilize modelos, alinhados com boas práticas de mercado, para
+                reportar o desempenho da sua empresa aos investidores.
               </span>
-              <p>Dashboard de indicadores</p>
+              <p>Dashboards de indicadores</p>
               <span>
-                Controle o desempenho do seu negócio, configurando indicadores
-                operacionais para sua empresa.
-              </span>
-              <p>Gestão de Quadro Societário</p>
-              <span>
-                Seja transparente, mostre o posicionamento do seu negócio e
-                desperte interesse de investidores.
+                Selecione indicadores-chave para apresentar de forma objetiva o
+                desempenho do seu negócio.
               </span>
               <p>Gestão de Conselho</p>
               <span>
-                Aproxime seus acionistas tendo uma ferramenta para gerir as
-                atividades nos conselhos de administração.
+                Aproxime seus conselheiros reunindo informações de reuniões e
+                gerenciando atividades em um sistema próprio.
+              </span>
+              <p>Consolidação do Societário</p>
+              <span>
+                Seja transparente e mantenha atualizado o quadro de acionistas
+                do seu negócio, trazendo segurança aos seus investidores.
               </span>
             </div>
           </div>
