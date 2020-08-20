@@ -1,6 +1,8 @@
 import '../styles/globals.css';
 import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const theme = {
   colors: {
@@ -46,6 +48,17 @@ function MyApp({ Component, pageProps }) {
   </script> */}
       </Head>
       <Component {...pageProps} />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </ThemeProvider>
   );
 }

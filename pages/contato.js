@@ -27,6 +27,10 @@ function Home() {
   const [status, setStatus] = useState('Enviar');
   const [formData, setFormData] = useState({});
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const sendEmail = useCallback(
     async perfil => {
       setStatus('Enviando...');
@@ -45,11 +49,16 @@ function Home() {
           body,
         );
         setStatus('Enviado');
+        setFormData({});
+        toast.success('Recebemos seu email!');
       } catch (err) {
-        setStatus('Falha no envio!');
+        toast.error('Falha no envio, tente novamente!');
+        setStatus('Falha no Envio.');
+      } finally {
+        setStatus('Enviar');
       }
     },
-    [formData],
+    [formData, toast, setFormData],
   );
 
   const perfis = ['Investidores', 'Empreendedor', 'Trabalhe conosco'];

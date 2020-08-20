@@ -48,17 +48,26 @@ function Rodape() {
           <Column>
             <ColumnTitle>Blog</ColumnTitle>
             <ColumnText>
-              <a href="https://blog.beegin.com.br/noticias/investimento-em-pmes">
+              <a
+                target="_blank"
+                href="https://beegin.com.br/blog/noticias/investimento-em-pmes"
+              >
                 Investimento em PMEs
               </a>
             </ColumnText>
             <ColumnText>
-              <a href="https://blog.beegin.com.br/noticias/tempos-de-crise">
+              <a
+                target="_blank"
+                href="https://beegin.com.br/blog/noticias/tempos-de-crise"
+              >
                 Tempos de crise
               </a>
             </ColumnText>
             <ColumnText>
-              <a href="https://blog.beegin.com.br/noticias/captacao-de-recursos">
+              <a
+                target="_blank"
+                href="https://beegin.com.br/blog/noticias/captacao-de-recursos"
+              >
                 Captação de recursos
               </a>
             </ColumnText>
@@ -74,13 +83,19 @@ function Rodape() {
           </Column>
           <Column>
             <ColumnTitle>
-              <a href="https://www.instagram.com/beegin.tech/">
+              <a target="_blank" href="https://www.instagram.com/beegin.tech/">
                 <FaInstagram style={{ margin: ' 0 9px' }} size={24} />
               </a>
-              <a href="https://www.facebook.com/plataformabeegin">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/plataformabeegin"
+              >
                 <FaFacebook style={{ margin: ' 0 9px' }} size={24} />
               </a>
-              <a href="https://www.linkedin.com/company/plataformabeegin/">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/plataformabeegin/"
+              >
                 <FaLinkedin style={{ margin: ' 0 9px' }} size={24} />
               </a>
             </ColumnTitle>

@@ -44,15 +44,17 @@ const Menu = () => {
                 </Link>
               </Li>
               <Li style={{ marginLeft: '39px' }}>
-                <Button>
-                  <a href="https://web.tech.beegin.com.br/">Faça parte</a>
-                  <MdPersonOutline size={16} />
-                </Button>
+                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                  <Button>
+                    Faça parte
+                    <MdPersonOutline size={16} />
+                  </Button>
+                </a>
               </Li>
               <Li>
-                <Button transparent>
-                  <a href="https://web.tech.beegin.com.br/">Login</a>
-                </Button>
+                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                  <Button transparent>Login</Button>
+                </a>
               </Li>
             </Ul>
           </nav>
@@ -98,16 +100,17 @@ const Menu = () => {
                 </Link>
               </Li>
               <Li>
-                <Button>
-                  <a href="https://web.tech.beegin.com.br/">Faça parte</a>{' '}
-                  <MdPersonOutline size={16} />
-                </Button>
+                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                  <Button>
+                    Faça parte
+                    <MdPersonOutline size={16} />
+                  </Button>
+                </a>{' '}
               </Li>
               <Li>
-                <Button transparent>
-                  {' '}
-                  <a href="https://web.tech.beegin.com.br/">Login</a>
-                </Button>
+                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                  <Button transparent>Login</Button>
+                </a>
               </Li>
             </Ul>
           </nav>

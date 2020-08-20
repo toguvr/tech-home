@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   ComoAjuda,
@@ -15,6 +15,9 @@ import Rodape from '../src/components/Rodape';
 import Head from 'next/head';
 
 function Ajuda() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
       <Head>
@@ -40,13 +43,19 @@ function Ajuda() {
             <span>Ajuda para investidores</span>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005905654-Primeiros-passos-como-investidor-na-beegin-tech">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005905654-Primeiros-passos-como-investidor-na-beegin-tech"
+                >
                   <span>Primeiros passos como investidor na beegin.tech </span>
                   <MdKeyboardArrowRight size={20} />
                 </a>
               </div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931933-Organizando-seus-investimentos-em-empresas">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931933-Organizando-seus-investimentos-em-empresas"
+                >
                   <span>
                     Como convidar e inserir dados de participação de empresas
                   </span>
@@ -56,7 +65,10 @@ function Ajuda() {
             </div>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/articles/360037466994-Como-consultar-reuni%C3%B5es-de-conselho-das-minhas-empresas-">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/articles/360037466994-Como-consultar-reuni%C3%B5es-de-conselho-das-minhas-empresas-"
+                >
                   <span>
                     Como consultar reuniões de conselho das minhas empresas?
                   </span>
@@ -64,7 +76,10 @@ function Ajuda() {
                 </a>
               </div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/articles/360037466974-Como-gerenciar-minhas-tarefas-de-conselho-">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/articles/360037466974-Como-gerenciar-minhas-tarefas-de-conselho-"
+                >
                   <span>Como gerenciar minhas tarefas de conselho? </span>
                   <MdKeyboardArrowRight size={20} />
                 </a>
@@ -75,7 +90,10 @@ function Ajuda() {
             <span>Ajuda para empreendedores</span>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931673-Primeiros-passos-como-empreendedor-na-beegin-tech ">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931673-Primeiros-passos-como-empreendedor-na-beegin-tech "
+                >
                   <span>
                     Primeiros passos como empreendedor na beegin.tech{' '}
                   </span>
@@ -83,7 +101,10 @@ function Ajuda() {
                 </a>
               </div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931713-Gerenciando-Perfis-de-Acesso ">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931713-Gerenciando-Perfis-de-Acesso "
+                >
                   <span>Gerenciando Perfis de Acesso </span>
                   <MdKeyboardArrowRight size={20} />
                 </a>
@@ -91,13 +112,19 @@ function Ajuda() {
             </div>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008983953-Inserindo-seus-Indicadores ">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008983953-Inserindo-seus-Indicadores "
+                >
                   <span>Inserindo seus Indicadores </span>
                   <MdKeyboardArrowRight size={20} />
                 </a>
               </div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005905474-Organizando-seu-Quadro-Societ%C3%A1rio">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005905474-Organizando-seu-Quadro-Societ%C3%A1rio"
+                >
                   <span>Organizando seu Quadro Societário </span>
                   <MdKeyboardArrowRight size={20} />
                 </a>
@@ -108,7 +135,10 @@ function Ajuda() {
             <span>Ajuda para contadores</span>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931553-Primeiros-passos-como-contador-na-beegin-tech ">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005931553-Primeiros-passos-como-contador-na-beegin-tech "
+                >
                   <span>Primeiros passos como contador na beegin.tech </span>
                   <MdKeyboardArrowRight size={20} />
                 </a>
@@ -116,7 +146,10 @@ function Ajuda() {
             </div>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005905374-Como-inserir-documentos-certid%C3%B5es-e-balancete-cont%C3%A1bil-trimestrais">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360005905374-Como-inserir-documentos-certid%C3%B5es-e-balancete-cont%C3%A1bil-trimestrais"
+                >
                   <span>
                     Como inserir documentos, certidões e balancete contábil
                     trimestrais{' '}
@@ -130,13 +163,16 @@ function Ajuda() {
             <span>Ajuda para colaboradores</span>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008985533-Primeiros-passos-como-colaborador-na-beegin-tech ">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008985533-Primeiros-passos-como-colaborador-na-beegin-tech "
+                >
                   <span>Primeiros passos como colaborador na beegin.tech </span>
                   <MdKeyboardArrowRight size={20} />
                 </a>
               </div>
               {/* <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008985553-Como-preencher-e-inserir-dados-de-relat%C3%B3rios-de-acordo-com-minha-%C3%A1rea- ">
+                <a target="_blank" href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008985553-Como-preencher-e-inserir-dados-de-relat%C3%B3rios-de-acordo-com-minha-%C3%A1rea- ">
                   <span>
                     Como preencher e inserir dados de relatórios de acordo com
                     minha área.{' '}
@@ -147,7 +183,10 @@ function Ajuda() {
             </div>
             <div>
               <div>
-                <a href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008985573-Como-revisar-e-obter-aprova%C3%A7%C3%A3o-de-dados-e-documentos-de-relat%C3%B3rios">
+                <a
+                  target="_blank"
+                  href="https://suporte.tech.beegin.com.br/hc/pt-br/sections/360008985573-Como-revisar-e-obter-aprova%C3%A7%C3%A3o-de-dados-e-documentos-de-relat%C3%B3rios"
+                >
                   <span>
                     Como revisar e obter aprovação de dados e documentos de
                     relatórios{' '}
@@ -160,7 +199,10 @@ function Ajuda() {
           <Acessar>
             <span>Ainda ficou com dúvidas?</span>
             <button>
-              <a href="https://suporte.tech.beegin.com.br/hc/pt-br">
+              <a
+                target="_blank"
+                href="https://suporte.tech.beegin.com.br/hc/pt-br"
+              >
                 Acessar listagem completa
               </a>
             </button>

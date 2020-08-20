@@ -37,19 +37,25 @@ import MenuMobile from '../src/components/MenuMobile';
 import Rodape from '../src/components/Rodape';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import { PopUp } from '../styles/solucoes';
+import { useEffect } from 'react';
 
 function Home() {
   const [openCalendly, setOpenCalendly] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>
       <Head>
         <title>Plataforma de RI - beegin.tech</title>
         <meta name="robots" content="index, follow"></meta>
-        {/* <description>
-          A beegin.tech te ajuda a organizar sua empresa para atrair
-          investidores com uma plataforma para gerir a relação com investidores.
-        </description> */}
+        <meta
+          name="description"
+          content="A beegin.tech te ajuda a organizar sua empresa para atrair
+          investidores com uma plataforma para gerir a relação com investidores."
+        />
       </Head>
       <Menu />
       {openCalendly && (
@@ -182,7 +188,9 @@ function Home() {
             </LeftContent>
             <RightContent>
               <ButtonCadastrar>
-                <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                  Cadastrar
+                </a>
               </ButtonCadastrar>
             </RightContent>
           </ContentWrapper>
@@ -225,7 +233,9 @@ function Home() {
             <RightContent>
               <ButtonCadastrar>
                 {' '}
-                <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                  Cadastrar
+                </a>
               </ButtonCadastrar>
             </RightContent>
           </ContentWrapper>
@@ -248,7 +258,9 @@ function Home() {
           </ContentBeeginerFirst>
           <ContentBeeginerSecond>Inscrições limitadas!</ContentBeeginerSecond>
           <ButtonParticipar>
-            <a href="https://web.tech.beegin.com.br/">Quero participar</a>
+            <a target="_blank" href={process.env.REACT_APP_WEB}>
+              Quero participar
+            </a>
           </ButtonParticipar>
         </div>
       </Participar>

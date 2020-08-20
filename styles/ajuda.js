@@ -138,11 +138,16 @@ export const PerfilContainer = styled.div`
 
     > div {
       display: flex;
+      justify-content: space-between;
+      width: 100%;
 
       > a {
+        width: 100%;
         max-width: 250px;
         align-items: center;
         display: flex;
+        justify-content: space-between;
+
         > span {
           max-width: 230px;
           cursor: pointer;

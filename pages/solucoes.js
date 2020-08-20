@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {
   First,
@@ -19,15 +19,21 @@ import Head from 'next/head';
 
 function Solucoes() {
   const [openCalendly, setOpenCalendly] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Container>
       <Head>
         <meta name="robots" content="index, follow" />
         <title>Soluções e Funcionalidades beegin.tech - Plataforma de RI</title>
-        {/* <description>
-          Controle o desempenho do seu negócio com Dashboards de Gestão de
-          Conselho, Cap table e relatórios de resultados para investidores.
-        </description> */}
+        <meta
+          name="description"
+          content="Controle o desempenho do seu negócio com Dashboards de Gestão de
+          Conselho, Cap table e relatórios de resultados para investidores."
+        />
       </Head>
       <Menu />
       <First>
@@ -69,7 +75,9 @@ function Solucoes() {
             </span>
             <button>
               {' '}
-              <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+              <a target="_blank" href={process.env.REACT_APP_WEB}>
+                Cadastrar
+              </a>
             </button>
           </LeftContent>
           <RightContent>
@@ -113,7 +121,9 @@ function Solucoes() {
             </span>
             <button>
               {' '}
-              <a href="https://web.tech.beegin.com.br/">Cadastrar</a>
+              <a target="_blank" href={process.env.REACT_APP_WEB}>
+                Cadastrar
+              </a>
             </button>
           </LeftContent>
           <RightContent>
