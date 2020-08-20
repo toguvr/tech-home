@@ -188,7 +188,10 @@ function Home() {
             </LeftContent>
             <RightContent>
               <ButtonCadastrar>
-                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                <a
+                  target="_blank"
+                  href={`${process.env.REACT_APP_WEB}?cadastrar=Investidor`}
+                >
                   Cadastrar
                 </a>
               </ButtonCadastrar>
@@ -233,7 +236,10 @@ function Home() {
             <RightContent>
               <ButtonCadastrar>
                 {' '}
-                <a target="_blank" href={process.env.REACT_APP_WEB}>
+                <a
+                  target="_blank"
+                  href={`${process.env.REACT_APP_WEB}?cadastrar=Empreendedor`}
+                >
                   Cadastrar
                 </a>
               </ButtonCadastrar>
