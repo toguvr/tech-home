@@ -9,7 +9,19 @@ import {
   FaInstagram,
   FaPhoneAlt,
 } from 'react-icons/fa';
-import { MdMail, MdLocalPhone, MdMore, MdAdd, MdRemove } from 'react-icons/md';
+import { FiArrowRight } from 'react-icons/fi';
+import {
+  MdMail,
+  MdLocalPhone,
+  MdMore,
+  MdAdd,
+  MdRemove,
+  MdKeyboardArrowRight,
+  MdChevronRight,
+  MdFormatAlignRight,
+  MdRotateRight,
+  MdSubdirectoryArrowRight,
+} from 'react-icons/md';
 import MenuMobile from '../src/components/MenuMobile';
 import Rodape from '../src/components/Rodape';
 import Button from '../src/components/Button';
@@ -32,7 +44,9 @@ function Home() {
   }, []);
 
   const sendEmail = useCallback(
-    async perfil => {
+    async (e, perfil) => {
+      e.preventDefault();
+
       setStatus('Enviando...');
       const body = {
         tipo: perfil,
@@ -49,7 +63,25 @@ function Home() {
           body,
         );
         setStatus('Enviado');
-        setFormData({});
+
+        setFormData({
+          assuntoInvestidores: '',
+          emailInvestidores: '',
+          nomeInvestidores: '',
+          telefoneInvestidores: '',
+          descricaoInvestidores: '',
+          assuntoEmpreendedor: '',
+          emailEmpreendedor: '',
+          nomeEmpreendedor: '',
+          telefoneEmpreendedor: '',
+          descricaoEmpreendedor: '',
+          'assuntoTrabalhe conosco': '',
+          'emailTrabalhe conosco': '',
+          'nomeTrabalhe conosco': '',
+          'telefoneTrabalhe conosco': '',
+          'descricaoTrabalhe conosco': '',
+        });
+
         toast.success('Recebemos seu email!');
       } catch (err) {
         toast.error('Falha no envio, tente novamente!');
@@ -68,6 +100,8 @@ function Home() {
         <title>Contato</title>
 
         <meta name="robots" content="noindex, nofollow" />
+
+        <link rel="canonical" href="https://tech.beegin.com.br/contato" />
       </Head>
       <Menu />
       <Contato id="Contato">
@@ -89,18 +123,18 @@ function Home() {
                   {openForm[perfil] && <MdRemove size={18} color="#EE7E4D" />}
                 </div>
                 {openForm[perfil] && (
-                  <Form>
+                  <Form onSubmit={e => sendEmail(e, perfil)}>
                     <div>
                       <div>
                         <div>
                           <label htmlFor="assunto">Assunto</label>
                           <input
-                            onChange={e =>
+                            onChange={e => {
                               setFormData({
                                 ...formData,
                                 [e.target.name]: e.target.value,
-                              })
-                            }
+                              });
+                            }}
                             name={`assunto${perfil}`}
                             value={formData[`assunto${perfil}`]}
                             type="text"
@@ -117,7 +151,7 @@ function Home() {
                             }
                             name={`email${perfil}`}
                             value={formData[`email${perfil}`]}
-                            type="text"
+                            type="email"
                           />
                         </div>
                       </div>
@@ -164,9 +198,7 @@ function Home() {
                         rows="10"
                         placeholder="Descrição"
                       ></textarea>
-                      <button onClick={() => sendEmail(perfil)}>
-                        {status}
-                      </button>
+                      <button type="submit">{status}</button>
                     </div>
                   </Form>
                 )}
@@ -175,10 +207,24 @@ function Home() {
           </main>
           <div>
             <span>Assine a nossa newsletter</span>
-            <input
-              type="text"
-              placeholder="Insira seu email e fique por dentro de nossas novidades"
-            />
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                toast.success('Obrigado por se cadastrar!');
+              }}
+              action
+              name="newstech"
+              method="post"
+              id="formNews"
+            >
+              <input
+                type="email"
+                placeholder="Insira seu email e fique por dentro de nossas novidades"
+              />
+              <button style={{ border: 'none' }} type="submit">
+                <FiArrowRight size={20} />
+              </button>
+            </form>
           </div>
         </div>
       </Contato>

@@ -70,18 +70,20 @@ export const Search = styled.div`
     margin: 16px;
   }
 
-  > button {
-    background: #dc825b;
-    border: none;
-    border-radius: 40px;
-    width: 126px;
-    height: 48px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
+  a {
+    > button {
+      background: #dc825b;
+      border: none;
+      border-radius: 40px;
+      width: 126px;
+      height: 48px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
 
-    :focus {
-      outline: none;
+      :focus {
+        outline: none;
+      }
     }
   }
 

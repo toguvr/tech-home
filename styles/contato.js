@@ -36,14 +36,21 @@ export const Contato = styled.div`
         margin-bottom: 17px;
       }
 
-      input {
-        border: none;
+      form {
+        width: 100%;
+        display: flex;
+        align-items: center;
         border-bottom: 1px solid #3d3d3d;
-        font-size: 18px;
-        padding: 7.5px 0;
-        background: transparent;
-        :focus {
-          outline: none;
+
+        input {
+          width: 100%;
+          border: none;
+          font-size: 18px;
+          padding: 7.5px 0;
+          background: transparent;
+          :focus {
+            outline: none;
+          }
         }
       }
     }
@@ -74,7 +81,7 @@ export const Accordeon = styled.div`
   }
 `;
 
-export const Form = styled.main`
+export const Form = styled.form`
   padding: 30px;
   > div {
     width: 70%;

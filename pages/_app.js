@@ -3,6 +3,8 @@ import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TagManager from 'react-gtm-module';
+import { useEffect } from 'react';
 
 const theme = {
   colors: {
@@ -11,6 +13,19 @@ const theme = {
 };
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    const tagManagerArgs = {
+      gtmId: 'GTM-WRLBHML',
+      dataLayer: {
+        pageTitle: document.title,
+      },
+    };
+
+    if (window.location.origin === 'https://web.tech.beegin.com.br') {
+      TagManager.initialize(tagManagerArgs);
+    }
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -18,34 +33,30 @@ function MyApp({ Component, pageProps }) {
 
         <meta property="og:type" content="website" />
 
+        <meta property="og:image" content="/shared.jpg" />
+        <meta name="twitter:image" content="/shared.jpg" />
+
         <meta property="og:site_name" content="beegin.tech" />
 
         <meta property="og:image:width" content="1200" />
 
         <meta property="og:image:height" content="600" />
         <link rel="icon" href="/logolaranja.svg" />
-        <link rel="canonical" href="https://tech.beegin.com.br/"></link>
+
         <link
           rel="stylesheet"
           type="text/css"
           href="//fonts.googleapis.com/css?family=Muli"
         />
-        {/* <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WRLBHML');
-  </script> */}
+
+        {/* <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WRLBHML"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript> */}
       </Head>
       <Component {...pageProps} />
       <ToastContainer

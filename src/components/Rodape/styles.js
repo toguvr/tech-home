@@ -38,6 +38,13 @@ export const ColumnTitle = styled.div`
   font-size: 24px;
   color: #ffffff;
   margin-bottom: 24px;
+
+  > a {
+    :hover {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+
   @media (max-width: 600px) {
     align-self: center;
   }
@@ -50,8 +57,21 @@ export const ColumnTitle = styled.div`
 export const ColumnText = styled.div`
   font-size: 16px;
   margin-bottom: 16px;
-  cursor: pointer;
   color: #ffffff;
+
+  > span {
+    cursor: pointer;
+    :hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  > a {
+    cursor: pointer;
+    :hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
 
   > div {
     background: transparent;
@@ -70,8 +90,11 @@ export const ColumnText = styled.div`
       color: #202c4e;
     }
     > svg {
+      width: 24px;
+      height: 24px;
     }
   }
+
   @media (max-width: 600px) {
     align-self: center;
   }

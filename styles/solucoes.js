@@ -134,27 +134,27 @@ export const LeftContent = styled.div`
     color: #dc825b;
     font-size: 40px;
   }
+  a {
+    > button {
+      color: #f7f7f7;
+      background: #dc825b;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 24px;
+      border: none;
+      font-size: 22px;
+      padding: 12px;
+      width: 260px;
+      margin-top: 24px;
 
-  > button {
-    color: #f7f7f7;
-    background: #dc825b;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 24px;
-    border: none;
-    font-size: 22px;
-    padding: 12px;
-    width: 260px;
-    margin-top: 24px;
+      @media (max-width: 600px) {
+        padding: 14px;
+      }
 
-    @media (max-width: 600px) {
-      padding: 14px;
-    }
-
-    :focus {
-      outline: none;
+      :focus {
+        outline: none;
+      }
     }
   }
-
   @media (max-width: 600px) {
     width: 100%;
     margin-bottom: 15px;

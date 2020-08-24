@@ -29,20 +29,31 @@ function Rodape() {
 
           <Column>
             <ColumnTitle>Menu</ColumnTitle>
-            <ColumnText onClick={() => router.push('/home')}>Home</ColumnText>
-            <ColumnText onClick={() => router.push('/solucoes')}>
-              Soluções
+
+            <ColumnText onClick={() => router.push('/home')}>
+              <span>Home</span>
             </ColumnText>
-            <ColumnText onClick={() => router.push('/ajuda')}>Ajuda</ColumnText>
+            <ColumnText onClick={() => router.push('/solucoes')}>
+              <span>Soluções</span>
+            </ColumnText>
+            <ColumnText onClick={() => router.push('/ajuda')}>
+              <span>Ajuda</span>
+            </ColumnText>
             <ColumnText onClick={() => router.push('/contato')}>
-              Contato
+              <span>Contato</span>
             </ColumnText>
           </Column>
           <Column>
             <ColumnTitle>beegin</ColumnTitle>
-            <ColumnText onClick={() => router.push('/home')}>Home</ColumnText>
-            <ColumnText onClick={() => router.push('/solucoes')}>
-              Soluções
+            <ColumnText>
+              <a target="_blank" href="http://beegin.com.br/">
+                Home
+              </a>
+            </ColumnText>
+            <ColumnText>
+              <a target="_blank" href="http://beegin.com.br/solucoes">
+                Soluções
+              </a>
             </ColumnText>
           </Column>
           <Column>
@@ -130,7 +141,11 @@ function Rodape() {
           </Column>
           <Column>
             <ColumnText>Uma empresa do</ColumnText>
-            <ColumnTitle>Grupo Solum</ColumnTitle>
+            <ColumnTitle>
+              <a target="_blank" href="https://gruposolum.com.br/">
+                Grupo Solum
+              </a>
+            </ColumnTitle>
           </Column>
         </FirstElements>
         <ColumnText style={{ cursor: 'default' }}>

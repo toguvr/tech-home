@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 import {
   ComoAjuda,
@@ -15,6 +15,8 @@ import Rodape from '../src/components/Rodape';
 import Head from 'next/head';
 
 function Ajuda() {
+  const [search, setSearch] = useState('');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -22,7 +24,7 @@ function Ajuda() {
     <Container>
       <Head>
         <title>Ajuda</title>
-
+        <link rel="canonical" href="https://tech.beegin.com.br/ajuda" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Menu />
@@ -32,8 +34,18 @@ function Ajuda() {
           <span>Como podemos ajudar você?</span>
           <Search>
             <MdSearch color="#4F4F4F" size={16} />
-            <input type="text" placeholder="Busque pelo que precisa" />
-            <button>Buscar</button>
+            <input
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              type="text"
+              placeholder="Busque pelo que precisa"
+            />
+            <a
+              target="_blank"
+              href={`https://suporte.tech.beegin.com.br/hc/pt-br/search?utf8=%E2%9C%93&query=${search}`}
+            >
+              <button>Buscar</button>
+            </a>
           </Search>
         </div>
       </ComoAjuda>

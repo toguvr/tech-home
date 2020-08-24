@@ -27,9 +27,81 @@ export const Ul = styled.ul`
   list-style: none;
 `;
 
+export const CardChoose = styled.div`
+  border-radius: 5px;
+  background: ${props => props.backColor};
+  padding: 10px 12.5px;
+  width: 147px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 70px;
+
+  p {
+    position: absolute;
+    top: -30px;
+    :before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+
+      width: 0;
+      height: 0;
+
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid ${props => props.backColor};
+    }
+  }
+
+  a {
+    cursor: pointer;
+    :hover {
+      color: #dc825b;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 0.5px solid #fff;
+    width: 100%;
+  }
+`;
+
+export const CardChooseMobile = styled.div`
+  border-radius: 5px;
+  background: ${props => props.backColor};
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  a {
+    cursor: pointer;
+    :hover {
+      color: #dc825b;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 0.5px solid #fff;
+    width: 100%;
+  }
+`;
+
 export const Li = styled.li`
   font-weight: ${props => props.currentPage && 'bold'};
   margin: 0 18px;
+  position: relative;
+`;
+
+export const LiMobile = styled.li`
+  font-weight: ${props => props.currentPage && 'bold'};
+
+  width: 100%;
+  padding: 0 20px;
 `;
 
 export const ContainerMobile = styled.div`

@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { ContainerDesktop, Ul, Li, ContainerMobile } from './styles';
+import {
+  ContainerDesktop,
+  Ul,
+  Li,
+  ContainerMobile,
+  CardChoose,
+  CardChooseMobile,
+  LiMobile,
+} from './styles';
 import Button from '../Button';
 import { MdPersonOutline, MdMenu, MdClose } from 'react-icons/md';
 import { useRouter } from 'next/router';
@@ -8,6 +16,7 @@ import Link from 'next/link';
 const Menu = () => {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
+  const [openChoose, setOpenChoose] = useState(false);
 
   return (
     <>
@@ -44,12 +53,33 @@ const Menu = () => {
                 </Link>
               </Li>
               <Li style={{ marginLeft: '39px' }}>
-                <a target="_blank" href={process.env.REACT_APP_WEB}>
-                  <Button>
-                    Faça parte
-                    <MdPersonOutline size={16} />
-                  </Button>
-                </a>
+                <Button onClick={() => setOpenChoose(!openChoose)}>
+                  Faça parte
+                  <MdPersonOutline size={16} />
+                </Button>
+
+                {openChoose && (
+                  <CardChoose
+                    backColor={
+                      router.pathname === '/home' ? '#161933' : '#172039'
+                    }
+                  >
+                    <p></p>
+                    <a
+                      target="_blank"
+                      href={`${process.env.REACT_APP_WEB}?cadastrar=Investidor`}
+                    >
+                      <span>Investidor</span>
+                    </a>
+                    <hr />
+                    <a
+                      target="_blank"
+                      href={`${process.env.REACT_APP_WEB}?cadastrar=Empreendedor`}
+                    >
+                      <span>Empreendedor</span>
+                    </a>
+                  </CardChoose>
+                )}
               </Li>
               <Li>
                 <a target="_blank" href={process.env.REACT_APP_WEB}>
@@ -79,39 +109,59 @@ const Menu = () => {
           <nav>
             <hr />
             <Ul>
-              <Li currentPage={router.pathname === '/home'}>
+              <LiMobile currentPage={router.pathname === '/home'}>
                 <Link href="/home">
                   <a>Home</a>
                 </Link>
-              </Li>
-              <Li currentPage={router.pathname === '/solucoes'}>
+              </LiMobile>
+              <LiMobile currentPage={router.pathname === '/solucoes'}>
                 <Link href="/solucoes">
                   <a>Soluções</a>
                 </Link>
-              </Li>
-              <Li currentPage={router.pathname === '/ajuda'}>
+              </LiMobile>
+              <LiMobile currentPage={router.pathname === '/ajuda'}>
                 <Link href="/ajuda">
                   <a>Ajuda</a>
                 </Link>
-              </Li>
-              <Li currentPage={router.pathname === '/contato'}>
+              </LiMobile>
+              <LiMobile currentPage={router.pathname === '/contato'}>
                 <Link href="/contato">
                   <a>Contato</a>
                 </Link>
-              </Li>
-              <Li>
-                <a target="_blank" href={process.env.REACT_APP_WEB}>
-                  <Button>
-                    Faça parte
-                    <MdPersonOutline size={16} />
-                  </Button>
-                </a>{' '}
-              </Li>
-              <Li>
+              </LiMobile>
+              <LiMobile>
+                <Button onClick={() => setOpenChoose(!openChoose)}>
+                  Faça parte
+                  <MdPersonOutline size={16} />
+                </Button>
+
+                {openChoose && (
+                  <CardChooseMobile
+                    backColor={
+                      router.pathname === '/home' ? '#161933' : '#172039'
+                    }
+                  >
+                    <a
+                      target="_blank"
+                      href={`${process.env.REACT_APP_WEB}?cadastrar=Investidor`}
+                    >
+                      <span>Investidor</span>
+                    </a>
+                    <hr />
+                    <a
+                      target="_blank"
+                      href={`${process.env.REACT_APP_WEB}?cadastrar=Empreendedor`}
+                    >
+                      <span>Empreendedor</span>
+                    </a>
+                  </CardChooseMobile>
+                )}
+              </LiMobile>
+              <LiMobile>
                 <a target="_blank" href={process.env.REACT_APP_WEB}>
                   <Button transparent>Login</Button>
                 </a>
-              </Li>
+              </LiMobile>
             </Ul>
           </nav>
         )}

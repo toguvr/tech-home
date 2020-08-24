@@ -56,6 +56,7 @@ function Home() {
           content="A beegin.tech te ajuda a organizar sua empresa para atrair
           investidores com uma plataforma para gerir a relação com investidores."
         />
+        <link rel="canonical" href="https://tech.beegin.com.br/home" />
       </Head>
       <Menu />
       {openCalendly && (

@@ -34,6 +34,7 @@ function Solucoes() {
           content="Controle o desempenho do seu negócio com Dashboards de Gestão de
           Conselho, Cap table e relatórios de resultados para investidores."
         />
+        <link rel="canonical" href="https://tech.beegin.com.br/solucoes" />
       </Head>
       <Menu />
       <First>
@@ -73,12 +74,12 @@ function Solucoes() {
             <span style={{ fontSize: '36px', color: '#f7f7f7' }}>
               Cadastre-se e aproveite os benefícios
             </span>
-            <button>
-              {' '}
-              <a target="_blank" href={process.env.REACT_APP_WEB}>
-                Cadastrar
-              </a>
-            </button>
+            <a
+              target="_blank"
+              href={`${process.env.REACT_APP_WEB}?cadastrar=Investidor`}
+            >
+              <button>Cadastrar</button>
+            </a>
           </LeftContent>
           <RightContent>
             <div>
@@ -119,12 +120,12 @@ function Solucoes() {
             <span style={{ fontSize: '36px', color: '#f7f7f7' }}>
               Faça seu cadastro e conheça nossas vantagens
             </span>
-            <button>
-              {' '}
-              <a target="_blank" href={process.env.REACT_APP_WEB}>
-                Cadastrar
-              </a>
-            </button>
+            <a
+              target="_blank"
+              href={`${process.env.REACT_APP_WEB}?cadastrar=Empreendedor`}
+            >
+              <button>Cadastrar</button>
+            </a>
           </LeftContent>
           <RightContent>
             <div>
